@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Szada Kút</title>
+
+		<link rel="stylesheet" href="css/main.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+	</head>
+	<body>
+		<div class="nav-wrapper">
+			<a href="#fooldal" class="nav-logo-container">
+				<img src="image/kut_logo.png" classs="nav-logo" alt="Főoldal" />
+			</a>
+			<a href="javascript:void(0);" class="nav-icon" onclick="burger()">
+				<i class="fa fa-bars"></i>
+			</a>
+			<a href="#szolg" class="item">Szolgáltatások</a>
+			<a href="#nyitva" class="item">Nyitvatartás</a>
+			<a href="#galeria" class="item">Galéria</a>
+			<a href="#rolunk" class="item">Rólunk</a>
+		</div>
+		<div class="image-wrapper">
+			<div class="main">
+				<div class="svg"></div>
+			</div>
+		</div>
+
+		<script>
+			function burger() {
+				var x = document.querySelector(".nav-wrapper");
+				if (x.className === "nav-wrapper") {
+					x.className += " show";
+				} else {
+					x.className = "nav-wrapper";
+				}
+			}
+		</script>
+	</body>
+</html>
