@@ -3,22 +3,41 @@ body {
   font-size: 20px;
   font-family: "Bitter", "serif";
   margin: 0;
+  background-color: #343434;
 }
 
 .image-wrapper .main {
-  background-image: url("../image/kut1.jpg");
-  background-size: cover;
-  background-position: 15% 50%;
   width: 100vw;
   height: 50vh;
+  background-image: url("../image/kut1.jpg");
+  background-size: cover;
+  background-position: 25% 50%;
 }
 
 .image-wrapper .main .svg {
   background: white;
-  -webkit-clip-path: polygon(0 0, 88% 0, 54% 100%, 0% 100%);
-          clip-path: polygon(0 0, 88% 0, 54% 100%, 0% 100%);
-  width: 100vw;
-  height: 100%;
+  -webkit-clip-path: polygon(0 0, 88% 0, 50% 50vh, 0% 50vh);
+          clip-path: polygon(0 0, 88% 0, 50% 50vh, 0% 50vh);
+  width: 100%;
+  height: 72.5%;
+  padding: 30% 0 0;
+}
+
+.image-wrapper .main .svg .text {
+  margin: 0 1rem 20%;
+  font-size: 1.5rem;
+  width: 55vw;
+  color: #343434;
+  text-align: left;
+}
+
+.image-wrapper .main .svg .strong {
+  font-weight: bold;
+}
+
+.image-wrapper .main .svg .light {
+  font-weight: lighter;
+  font-size: 1rem;
 }
 
 .nav-wrapper {
@@ -44,13 +63,16 @@ body {
 .nav-wrapper a.nav-icon {
   display: block;
   float: right;
-  width: 5%;
-  height: 2rem;
-  margin: 1.25rem 1.25rem;
-  padding: 0;
-  background-color: #55deb7;
+  width: 4rem;
+  height: 4rem;
+  background-color: #343434;
   text-align: center;
   color: white;
+}
+
+.nav-wrapper a.nav-icon i {
+  font-size: 1.5rem;
+  margin: 1.25rem 0 0;
 }
 
 .nav-wrapper a.item {
@@ -65,18 +87,32 @@ body {
 .nav-wrapper.show a.item {
   display: block;
   float: none;
-  text-align: left;
+  text-align: center;
   background-color: #343434;
-  color: white;
+  color: #55deb7;
   margin: 0;
   height: 2rem;
+  font-size: 1rem;
+  padding: 1rem 1rem 0;
+}
+
+.nav-wrapper.show a.item:nth-child(odd) {
+  background-color: #55deb7;
+  color: #343434;
 }
 
 .nav-wrapper.show a.nav-icon {
-  width: 5%;
-  height: 2rem;
-  margin: 1.25rem 1.25rem;
-  padding: 0;
-  background-color: #343434;
+  display: block;
+  float: right;
+  width: 4rem;
+  height: 4rem;
+  background-color: #232323;
+  text-align: center;
+  color: white;
+}
+
+.nav-wrapper.show a.nav-icon i {
+  font-size: 1.5rem;
+  margin: 1.25rem 0 0;
 }
 /*# sourceMappingURL=main.css.map */
