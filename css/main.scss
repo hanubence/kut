@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500;600;700&display=swap");
+@import "animations";
 
 :root {
 	--kek: #5ccac3;
+	--select: #469993;
 	--szurke: #3e3e3e;
+
+	font-size: 16px;
 }
 
 body {
@@ -12,102 +16,100 @@ body {
 	font-family: "Bitter", "serif";
 }
 
-.nav {
+.head {
 	width: 100vw;
-	height: 40vh;
-
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 2.5fr 1fr;
-	grid-template-areas:
-		"bar"
-		"dropdown";
-}
-
-.navbar-bar {
-	grid-area: bar;
-	background-color: white;
-
-	width: 100%;
-	height: 100%;
-	position: relative;
-
-	svg {
-		height: 80%;
-		width: 100%;
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		display: block;
-		margin: auto;
-	}
-
-	#felirat {
-		fill: var(--szurke);
-	}
-
-	#tomlo {
-		fill: var(--kek);
-	}
-}
-
-.navbar-dropdown {
-	grid-area: dropdown;
-	background-color: var(--kek);
-
-	position: relative;
-	display: inline-block;
-
-	svg {
-		height: 70%;
-		width: 100%;
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		display: block;
-		margin: auto;
-		fill: white;
-	}
-}
-
-.dropdown-content {
+	height: 4rem;
 	display: flex;
-	flex-direction: column;
-	position: relative;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: auto;
+	position: fixed;
 
-	height: 0%;
-	background-color: var(--kek);
+	border-bottom: 0.5rem solid var(--kek);
 
-	a {
-		display: block;
-		visibility: hidden;
-		transition: all 1s ease;
-		background-color: none;
-
-		text-decoration: none;
-		font-size: 1.5rem;
-		margin: 0 auto;
-		padding: 0.5rem 0;
-
-		color: var(--szurke);
-
+	svg {
+		height: 3rem;
 		width: 100%;
+
+		margin: 0 auto;
+
+		#felirat {
+			fill: var(--szurke);
+		}
+
+		#tomlo {
+			fill: var(--kek);
+		}
 	}
-
-	a:nth-child(odd) {
-		background-color: #4eada7;
-
-		transition: all 1s ease;
-	}
-
-	transition: all 0.5s ease;
 }
 
-.dropdown-content.open {
-	height: 100%;
+.navbar {
+	width: 100vw;
+	height: 5rem;
+	background-color: var(--kek);
 
-	a {
-		display: block;
-		visibility: visible;
+	position: fixed;
+	bottom: 0;
+	padding: 0;
+	ul {
+		display: grid;
+
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: 5rem;
+		place-items: center;
+
+		margin: 0;
+		padding: 0;
+
+		li {
+			list-style-type: none;
+			width: 100%;
+			height: 5rem;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: center;
+			text-align: center;
+
+			svg {
+				width: 3rem;
+				height: auto;
+
+				margin: 0 auto;
+				fill: white;
+
+				transition: fill 0.2s ease;
+			}
+
+			p {
+				margin: 0 auto;
+				font-size: 70%;
+				color: white;
+
+				transition: color 0.2s ease;
+			}
+
+			transition: background-color 0.2s ease;
+		}
+
+		li.selected {
+			background-color: var(--select);
+
+			transition: background-color 0.2s ease;
+
+			svg {
+				fill: var(--szurke);
+
+				transition: fill 0.2s ease;
+			}
+
+			p {
+				color: var(--szurke);
+
+				transition: color 0.2s ease;
+			}
+		}
 	}
 }
