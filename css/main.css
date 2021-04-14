@@ -3,6 +3,7 @@
   --kek: #5ccac3;
   --select: #469993;
   --szurke: #3e3e3e;
+  --atmenet: linear-gradient(to bottom right, #5ccac3, #55ffc2);
   font-size: 16px;
 }
 
@@ -27,7 +28,12 @@ body {
   width: 100%;
   margin: auto;
   position: fixed;
-  border-bottom: 0.5rem solid var(--kek);
+  z-index: 2;
+  top: 0;
+  background-color: white;
+  border-bottom: 0.5rem solid;
+  border-image-slice: 1;
+  border-image-source: var(--atmenet);
 }
 
 .head svg {
@@ -41,13 +47,17 @@ body {
 }
 
 .head svg #tomlo {
-  fill: var(--kek);
+  fill: var(--atmenet);
+}
+
+.top {
+  margin-top: 4rem;
 }
 
 .navbar {
   width: 100vw;
   height: 5rem;
-  background-color: var(--kek);
+  background-image: var(--atmenet);
   position: fixed;
   bottom: 0;
   padding: 0;
@@ -119,5 +129,77 @@ body {
   color: var(--szurke);
   -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease;
+}
+
+.feature {
+  width: 100vw;
+  height: calc(100vh - 9.5rem);
+  margin: 4.5rem 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature .content {
+  height: 50%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 2rem;
+}
+
+.feature .content .svg-container {
+  height: 7rem;
+  width: 7rem;
+  background-image: var(--atmenet);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.feature .content .svg-container svg.contact {
+  height: 5rem;
+  width: auto;
+  fill: szurke;
+}
+
+.feature .content ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.feature .content ul .title {
+  font-weight: 500;
+  border-bottom: 0.2rem solid;
+  border-image-slice: 1;
+  border-image-source: var(--atmenet);
+}
+
+.feature .content ul li {
+  margin: 1rem 0 0;
+  font-size: 1.5rem;
+}
+
+.feature .benzinkut {
+  height: 50%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: -30px center;
+     object-position: -30px center;
 }
 /*# sourceMappingURL=main.css.map */

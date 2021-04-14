@@ -6,6 +6,8 @@
 	--select: #469993;
 	--szurke: #3e3e3e;
 
+	--atmenet: linear-gradient(to bottom right, #5ccac3, #55ffc2);
+
 	font-size: 16px;
 }
 
@@ -25,8 +27,13 @@ body {
 	width: 100%;
 	margin: auto;
 	position: fixed;
+	z-index: 2;
+	top: 0;
 
-	border-bottom: 0.5rem solid var(--kek);
+	background-color: white;
+	border-bottom: 0.5rem solid;
+	border-image-slice: 1;
+	border-image-source: var(--atmenet);
 
 	svg {
 		height: 3rem;
@@ -39,15 +46,20 @@ body {
 		}
 
 		#tomlo {
-			fill: var(--kek);
+			fill: var(--atmenet);
 		}
 	}
+}
+
+.top {
+	//fix for content jumping
+	margin-top: 4rem;
 }
 
 .navbar {
 	width: 100vw;
 	height: 5rem;
-	background-color: var(--kek);
+	background-image: var(--atmenet);
 
 	position: fixed;
 	bottom: 0;
@@ -111,5 +123,66 @@ body {
 				transition: color 0.2s ease;
 			}
 		}
+	}
+}
+
+.feature {
+	width: 100vw;
+	height: calc(100vh - 9.5rem);
+	margin: 4.5rem 0 0;
+	position: relative;
+	overflow: hidden;
+
+	.content {
+		height: 50%;
+		width: 100%;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		padding-top: 2rem;
+
+		.svg-container {
+			height: 7rem;
+			width: 7rem;
+
+			background-image: var(--atmenet);
+			border-radius: 50%;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			svg.contact {
+				height: 5rem;
+				width: auto;
+				fill: szurke;
+			}
+		}
+
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+
+			.title {
+				font-weight: 500;
+				border-bottom: 0.2rem solid;
+				border-image-slice: 1;
+				border-image-source: var(--atmenet);
+			}
+
+			li {
+				margin: 1rem 0 0;
+				font-size: 1.5rem;
+			}
+		}
+	}
+
+	.benzinkut {
+		height: 50%;
+		object-fit: contain;
+		object-position: -30px center;
 	}
 }
