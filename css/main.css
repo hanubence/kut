@@ -4,13 +4,25 @@
   --select: #469993;
   --szurke: #3e3e3e;
   --atmenet: linear-gradient(to bottom right, #5ccac3, #55ffc2);
-  font-size: 16px;
 }
 
 body {
+  font-size: 16px;
   margin: 0;
   padding: 0;
   font-family: "Bitter", "serif";
+}
+
+@media only screen and (max-width: 414px) {
+  body {
+    font-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 834px) {
+  body {
+    font-size: 16px;
+  }
 }
 
 .head {
@@ -50,8 +62,8 @@ body {
   fill: var(--atmenet);
 }
 
-.top {
-  margin-top: 4rem;
+.feature.top {
+  margin-top: 4.5rem;
 }
 
 .navbar {
@@ -134,13 +146,16 @@ body {
 .feature {
   width: 100vw;
   height: calc(100vh - 9.5rem);
-  margin: 4.5rem 0 0;
+  margin: 0;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
+  -webkit-transition: height 0.66s ease-out;
+  transition: height 0.66s ease-out;
+  margin-bottom: 5rem;
 }
 
 .feature .content {
-  height: 50%;
+  height: 60%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,12 +167,16 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 2rem;
+  padding: 0;
 }
 
 .feature .content .svg-container {
-  height: 7rem;
-  width: 7rem;
+  height: 8rem;
+  width: 8rem;
   background-image: var(--atmenet);
   border-radius: 50%;
   display: -webkit-box;
@@ -172,34 +191,39 @@ body {
 }
 
 .feature .content .svg-container svg.contact {
-  height: 5rem;
+  height: 5.5rem;
   width: auto;
   fill: szurke;
 }
 
-.feature .content ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.feature .content ul .title {
+.feature .content .title {
   font-weight: 500;
-  border-bottom: 0.2rem solid;
-  border-image-slice: 1;
-  border-image-source: var(--atmenet);
+  position: relative;
+  text-align: center;
 }
 
-.feature .content ul li {
-  margin: 1rem 0 0;
-  font-size: 1.5rem;
+.feature .content .title::after {
+  content: "";
+  background-image: var(--atmenet);
+  position: absolute;
+  bottom: -5%;
+  left: calc(50% - 2.5rem);
+  height: 3px;
+  width: 5rem;
+}
+
+.feature .content p {
+  margin: 0 1rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+  height: auto;
 }
 
 .feature .benzinkut {
-  height: 50%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: -30px center;
-     object-position: -30px center;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 /*# sourceMappingURL=main.css.map */
