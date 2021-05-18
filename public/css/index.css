@@ -13,11 +13,27 @@ body {
 }
 
 html {
-  font-size: 16px;
+  font-size: 20px;
   font-family: "Montserrat", sans-serif;
   --zold1: #66f4db;
   --zold2: #c2ffe9;
   --szurke: #3e3e3e;
+}
+
+html ::-webkit-scrollbar {
+  width: 10px;
+}
+
+html ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+html ::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+html ::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 body {
@@ -27,33 +43,43 @@ body {
 
 nav {
   width: 100%;
-  height: 4rem;
+  height: 5rem;
   background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 nav svg {
   display: block;
   padding: 0;
-  height: 3rem;
-  margin: 0 auto;
+  height: 90%;
+  width: 90%;
+  margin: auto auto;
   padding: 0.5rem;
 }
 
 .hero {
   display: block;
   width: 100%;
-  height: 50%;
+  max-height: 100%;
 }
 
 .hero .hero-image {
   width: 100%;
-  height: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.hero svg {
+.hero .wave {
   width: 100%;
+  height: 8rem;
+}
+
+.hero .wave svg {
+  width: 100%;
+  height: 8rem;
   margin-top: -2rem;
   z-index: 2;
 }
@@ -65,32 +91,47 @@ nav svg {
 .grid-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-  grid-auto-rows: auto;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (minmax(6rem, 16rem))[3];
+      grid-template-rows: repeat(3, minmax(6rem, 16rem));
   grid-auto-flow: column;
-  grid-row-gap: 6rem;
-  place-items: center;
-  padding-top: 6rem;
+  grid-row-gap: 8rem;
+  margin-top: -25%;
+  padding-top: 30%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
   position: relative;
   z-index: -1;
 }
 
 .info1 {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
-  height: 60%;
+  height: 100%;
   position: relative;
+  padding: 0;
   z-index: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .info1 .box {
   background-color: var(--szurke);
-  margin: 0 3rem 0;
-  padding: 1rem 1.5rem;
+  margin: 0 auto;
+  padding: 1rem;
   color: white;
   border-radius: 5%;
   position: absolute;
+  min-height: 80%;
+  width: clamp(40%, 50%, 65%);
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .info1 .box::after {
@@ -137,5 +178,41 @@ nav svg {
 .feature .feature-image-wrapper img {
   width: 100%;
   height: 100%;
+}
+
+@media only screen and (max-width: 350px) {
+  html {
+    font-size: 16px;
+  }
+  .grid-container {
+    padding-top: 35%;
+  }
+  .box {
+    max-width: 45%;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 20px;
+  }
+  .grid-container {
+    padding-top: 35%;
+  }
+  .box {
+    max-width: 45%;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  html {
+    font-size: 28px;
+  }
+  .grid-container {
+    padding-top: 35%;
+  }
+  .box {
+    max-width: 40%;
+  }
 }
 /*# sourceMappingURL=index.css.map */
