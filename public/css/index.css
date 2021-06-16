@@ -13,7 +13,7 @@ body {
 }
 
 html {
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Montserrat", sans-serif;
   --zold1: #66f4db;
   --zold2: #c2ffe9;
@@ -43,7 +43,7 @@ body {
 
 nav {
   width: 100%;
-  height: 5rem;
+  height: clamp(1.5rem, 3.5rem, 5rem);
   background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -61,8 +61,7 @@ nav svg {
 
 .hero {
   display: block;
-  width: 100%;
-  max-height: 100%;
+  width: auto;
 }
 
 .hero .hero-image {
@@ -86,19 +85,20 @@ nav svg {
 
 .pattern {
   background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='26' height='26' patternTransform='scale(1) rotate(20)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,1)'/><path d='M10-6V6M10 14v12M26 10H14M6 10H-6' transform='translate(3,0)' stroke-linecap='square' stroke-width='1' stroke='hsla(169, 87%, 68%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+  position: relative;
+  z-index: -2;
+  margin-top: -8rem;
 }
 
-.grid-container {
+.pattern .grid-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: (minmax(6rem, 16rem))[3];
-      grid-template-rows: repeat(3, minmax(6rem, 16rem));
-  grid-auto-flow: column;
-  grid-row-gap: 8rem;
-  margin-top: -25%;
-  padding-top: 30%;
+  -ms-grid-rows: 24rem (20rem)[2];
+      grid-template-rows: 24rem repeat(2, 20rem);
+  grid-auto-flow: row;
+  padding-top: 12rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -107,34 +107,38 @@ nav svg {
   z-index: -1;
 }
 
-.info1 {
+.pattern .grid-container .info1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: 100%;
   position: relative;
   padding: 0;
   z-index: 1;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
-.info1 .box {
+.pattern .grid-container .info1 .box {
   background-color: var(--szurke);
   margin: 0 auto;
   padding: 1rem;
   color: white;
   border-radius: 5%;
   position: absolute;
-  min-height: 80%;
-  width: clamp(40%, 50%, 65%);
+  height: auto;
+  min-width: 20%;
+  max-width: 80%;
   -ms-flex-line-pack: center;
       align-content: center;
 }
 
-.info1 .box::after {
+.pattern .grid-container .info1 .box::after {
   width: 100%;
   height: 100%;
   content: "";
@@ -146,7 +150,7 @@ nav svg {
   z-index: -1;
 }
 
-.info1 .box::before {
+.pattern .grid-container .info1 .box::before {
   width: 100%;
   height: 100%;
   content: "";
@@ -158,13 +162,13 @@ nav svg {
   z-index: -1;
 }
 
-.feature {
+.pattern .grid-container .feature {
   display: block;
-  height: 16rem;
+  height: auto;
   width: 100%;
 }
 
-.feature .feature-image-wrapper {
+.pattern .grid-container .feature .feature-image-wrapper {
   width: 10rem;
   height: 10rem;
   border-radius: 8rem;
@@ -175,44 +179,8 @@ nav svg {
   margin: auto auto;
 }
 
-.feature .feature-image-wrapper img {
+.pattern .grid-container .feature .feature-image-wrapper img {
   width: 100%;
   height: 100%;
-}
-
-@media only screen and (max-width: 350px) {
-  html {
-    font-size: 16px;
-  }
-  .grid-container {
-    padding-top: 35%;
-  }
-  .box {
-    max-width: 45%;
-  }
-}
-
-@media only screen and (min-width: 640px) {
-  html {
-    font-size: 20px;
-  }
-  .grid-container {
-    padding-top: 35%;
-  }
-  .box {
-    max-width: 45%;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  html {
-    font-size: 28px;
-  }
-  .grid-container {
-    padding-top: 35%;
-  }
-  .box {
-    max-width: 40%;
-  }
 }
 /*# sourceMappingURL=index.css.map */
