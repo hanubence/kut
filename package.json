@@ -2,17 +2,19 @@
   "name": "kut",
   "version": "1.0.0",
   "description": "",
-  "main": "postcss.config.js",
   "dependencies": {},
   "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-nightly.2393",
     "autoprefixer": "^10.3.1",
+    "express": "^4.17.1",
+    "parcel": "^2.0.0-nightly.769",
     "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.4",
-    "vite": "^2.4.2"
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.2.4"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build"
+    "dev": "parcel serve src/index.html",
+    "build": "parcel build src/index.html"
   },
   "repository": {
     "type": "git",

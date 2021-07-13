@@ -1,0 +1,2 @@
+function toggleNav(e){let l=document.querySelector(".mobile-nav"),s=document.querySelector(".hamburger"),t=document.querySelector(".kereszt");l.classList.toggle("left-1/4"),l.classList.toggle("left-full"),s.classList.toggle("visible"),s.classList.toggle("block"),s.classList.toggle("invisible"),s.classList.toggle("hidden"),t.classList.toggle("visible"),t.classList.toggle("block"),t.classList.toggle("invisible"),t.classList.toggle("hidden")}
+//# sourceMappingURL=index.7f659484.js.map

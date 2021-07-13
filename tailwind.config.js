@@ -3,7 +3,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
 	purge: {
 		enabled: true,
-		content: ["./public/*.html"],
+		content: ["./src/*.html"],
 		safelist: ["left-1/4"],
 	},
 	theme: {
