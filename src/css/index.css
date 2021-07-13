@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(2) rotate(30)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,1)'/><path d='M 10,-2.55e-7 V 20 Z M -1.1677362e-8,10 H 20 Z'  stroke-width='1' stroke='hsla(158, 100%, 67%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+}
+
+html ::-webkit-scrollbar {
+  width: 10px;
+}
+html ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+html ::-webkit-scrollbar-thumb {
+  background: #888;
+}
+html ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.harmas {
+  grid-template-columns: 1fr 8fr 1fr;
+}
+
+.mobile-nav {
+  width: 75%;
+  height: 100vh;
+  transition: left 0.65s ease;
+}
+
+.banner {
+  object-position: center 92%;
+}
