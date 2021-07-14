@@ -2,7 +2,6 @@
   "name": "kut",
   "version": "1.0.0",
   "description": "",
-  "dependencies": {},
   "devDependencies": {
     "@parcel/transformer-image": "^2.0.0-nightly.2393",
     "autoprefixer": "^10.3.1",
@@ -10,11 +9,17 @@
     "parcel": "^2.0.0-nightly.769",
     "postcss": "^8.3.5",
     "postcss-cli": "^8.3.1",
+    "sharp": "^0.28.3",
     "tailwindcss": "^2.2.4"
   },
   "scripts": {
-    "dev": "parcel serve src/index.html",
-    "build": "parcel build src/index.html"
+    "server": "node server",
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:parcel": "parcel serve ./src/index.html",
+    "dev:css": "tailwindcss -o src/tailwind.css -w",
+    "build": "npm-run-all build:css build:parcel",
+    "build:parcel": "parcel build ./src/index.html",
+    "build:css": "tailwindcss -o src/tailwind.css"
   },
   "repository": {
     "type": "git",
