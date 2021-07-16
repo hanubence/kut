@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const path = require("path");
 
-app.set("port", process.env.port || 3000);
+app.set("port", process.env.port || 8000);
 
 app.use(express.static("dist"));
 
@@ -13,5 +13,5 @@ app.get("/", (req, res, next) => {
 });
 
 app.listen(app.get("port"), (server) => {
-	console.info(`Server listen on port ${app.get("port")}`);
+	console.info(`Server listen on http://127.0.0.1:${app.get("port")}`);
 });
