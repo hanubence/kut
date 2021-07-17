@@ -13,5 +13,5 @@ app.get("/", (req, res, next) => {
 });
 
 app.listen(app.get("port"), (server) => {
-	console.info(`Server listen on http://127.0.0.1:${app.get("port")}`);
+	console.info(`Server listen on port ${app.get("port")}`);
 });
