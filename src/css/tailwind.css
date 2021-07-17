@@ -622,6 +622,11 @@ video {
   margin-right: auto;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .mt-16 {
   margin-top: 4rem;
 }
@@ -630,20 +635,16 @@ video {
   margin-top: -2rem;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
 .mb-6 {
   margin-bottom: 1.5rem;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
 .mb-10 {
   margin-bottom: 2.5rem;
+}
+
+.ml-0 {
+  margin-left: 0px;
 }
 
 .ml-6 {
@@ -840,12 +841,20 @@ video {
   place-items: center;
 }
 
+.content-between {
+  align-content: space-between;
+}
+
 .items-center {
   align-items: center;
 }
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .gap-5 {
@@ -860,10 +869,6 @@ video {
   justify-self: center;
 }
 
-.rounded-sm {
-  border-radius: 0.125rem;
-}
-
 .rounded {
   border-radius: 0.25rem;
 }
@@ -872,23 +877,14 @@ video {
   border-radius: 9999px;
 }
 
-.border-4 {
-  border-width: 4px;
-}
-
-.border-white {
-  --tw-border-opacity: 1;
-  border-color: rgba(255, 255, 255, var(--tw-border-opacity));
-}
-
-.border-teal-accent-400 {
-  --tw-border-opacity: 1;
-  border-color: rgba(29, 233, 182, var(--tw-border-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+
+.bg-gray-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(97, 97, 97, var(--tw-bg-opacity));
 }
 
 .bg-gray-800 {
@@ -911,24 +907,24 @@ video {
      object-fit: cover;
 }
 
-.px-3 {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
-}
-
-.py-px {
-  padding-top: 1px;
-  padding-bottom: 1px;
 }
 
 .pt-16 {
@@ -1024,11 +1020,6 @@ video {
   --tw-shadow: 0 0 #0000;
 }
 
-.shadow-md {
-  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -1062,8 +1053,8 @@ body {
 .section-scroll {
   background-image: url("../svg/hatter.svg");
   background-attachment: fixed;
-  transform:translatez(0);
-  -webkit-transform:translatez(0);
+  transform: translatez(0);
+  -webkit-transform: translatez(0);
 }
 
 html ::-webkit-scrollbar {
@@ -1108,6 +1099,10 @@ html ::-webkit-scrollbar-thumb:hover {
 
   .sm\:max-w-xl {
     max-width: 36rem;
+  }
+
+  .sm\:grid-flow-row {
+    grid-auto-flow: row;
   }
 
   .sm\:grid-cols-2 {
@@ -1232,8 +1227,16 @@ html ::-webkit-scrollbar-thumb:hover {
     width: 8rem;
   }
 
+  .lg\:w-full {
+    width: 100%;
+  }
+
   .lg\:max-w-2xl {
     max-width: 42rem;
+  }
+
+  .lg\:max-w-full {
+    max-width: 100%;
   }
 
   .lg\:max-w-screen-lg {
@@ -1242,11 +1245,6 @@ html ::-webkit-scrollbar-thumb:hover {
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .lg\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 
   .lg\:py-20 {

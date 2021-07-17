@@ -12,8 +12,8 @@ body {
 .section-scroll {
   background-image: url("../svg/hatter.svg");
   background-attachment: fixed;
-  transform:translatez(0);
-  -webkit-transform:translatez(0);
+  transform: translatez(0);
+  -webkit-transform: translatez(0);
 }
 
 html ::-webkit-scrollbar {
