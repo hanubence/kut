@@ -17,10 +17,10 @@
     "server": "node server",
     "dev": "npm-run-all --parallel dev:*",
     "dev:parcel": "parcel serve ./src/index.html",
-    "dev:css": "tailwindcss -o src/tailwind.css -w",
+    "dev:css": "tailwindcss -i src/css/index.css -o src/css/tailwind.css -w",
     "build": "npm-run-all build:css build:parcel",
     "build:parcel": "parcel build ./src/index.html",
-    "build:css": "tailwindcss -o src/tailwind.css"
+    "build:css": "tailwindcss -i src/css/index.css -o src/css/tailwind.css"
   },
   "repository": {
     "type": "git",

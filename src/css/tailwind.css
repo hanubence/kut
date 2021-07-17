@@ -710,6 +710,10 @@ video {
   width: auto;
 }
 
+.w-3\/4 {
+  width: 75%;
+}
+
 .w-full {
   width: 100%;
 }
@@ -844,12 +848,8 @@ video {
   justify-content: center;
 }
 
-.gap-8 {
-  gap: 2rem;
-}
-
-.gap-12 {
-  gap: 3rem;
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .self-center {
@@ -1052,6 +1052,46 @@ video {
   transition-duration: 150ms;
 }
 
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.section-scroll {
+  background-image: url("../svg/hatter.svg");
+  background-attachment: fixed;
+  transform:translatez(0);
+  -webkit-transform:translatez(0);
+}
+
+html ::-webkit-scrollbar {
+  width: 10px;
+}
+
+html ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+html ::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+html ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.harmas {
+  grid-template-columns: 1fr 8fr 1fr;
+}
+
+.mobile-nav {
+  width: 75%;
+  height: 100vh;
+  transition: left 0.65s ease;
+}
+
 @media (min-width: 640px) {
   .sm\:mx-auto {
     margin-left: auto;
@@ -1060,6 +1100,10 @@ video {
 
   .sm\:block {
     display: block;
+  }
+
+  .sm\:w-full {
+    width: 100%;
   }
 
   .sm\:max-w-xl {
@@ -1184,10 +1228,6 @@ video {
     height: 16rem;
   }
 
-  .lg\:h-72 {
-    height: 18rem;
-  }
-
   .lg\:w-32 {
     width: 8rem;
   }
@@ -1227,6 +1267,11 @@ video {
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 
