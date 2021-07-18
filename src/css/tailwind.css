@@ -564,6 +564,10 @@ video {
   top: 0px;
 }
 
+.-top-16 {
+  top: -4rem;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -956,6 +960,11 @@ video {
   padding-bottom: 0.25rem;
 }
 
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -968,6 +977,10 @@ video {
 
 .pt-16 {
   padding-top: 4rem;
+}
+
+.pb-12 {
+  padding-bottom: 3rem;
 }
 
 .pl-4 {
@@ -1331,10 +1344,6 @@ html ::-webkit-scrollbar-thumb:hover {
     max-width: 100%;
   }
 
-  .lg\:max-w-screen-lg {
-    max-width: 1024px;
-  }
-
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -1344,9 +1353,9 @@ html ::-webkit-scrollbar-thumb:hover {
     padding-bottom: 5rem;
   }
 
-  .lg\:py-32 {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+  .lg\:py-28 {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
   }
 
   .lg\:text-xl {
