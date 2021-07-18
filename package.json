@@ -19,7 +19,7 @@
     "dev:parcel": "parcel serve ./src/index.html",
     "dev:css": "tailwindcss -i src/css/index.css -o src/css/tailwind.css -w",
     "build": "npm-run-all build:css build:parcel",
-    "build:parcel": "parcel build ./src/index.html",
+    "build:parcel": "parcel build ./src/index.html --no-source-maps --no-cache",
     "build:css": "tailwindcss -i src/css/index.css -o src/css/tailwind.css"
   },
   "repository": {

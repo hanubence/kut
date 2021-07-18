@@ -15,6 +15,9 @@ module.exports = {
 				sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
 			},
 			colors: {
+				zold: {
+					"base": "#62c6b2",
+				},
 				teal: {
 					50: "#e0f2f1",
 					100: "#b2dfdb",
