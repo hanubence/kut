@@ -470,7 +470,7 @@
                 font-bold
                 leading-none
                 tracking-tight
-                text-gray-800
+                text-gray-900
                 sm:text-4xl
                 md:mx-auto
               "
@@ -514,7 +514,7 @@
               </span>
               óta Szada szolgálatában.
             </h2>
-            <p class="text-xl text-gray-800 md:text-lg">
+            <p class="text-xl text-gray-900 md:text-lg">
               A település egyetlen töltőállomása, amely közel egy évtizede
               szolgálja ki vásárlóit minőségi üzemanyaggal, autóápolási
               cikkekkel kedvező árakon.
@@ -845,34 +845,93 @@
         />
       </div>
     </section>
-    <section id="kedvezmenyek" class="w-full h-auto py-12 bg-zold-base">
+    <section
+      id="kedvezmenyek"
+      class="w-full h-auto py-12 bg-zold-base relative"
+    >
       <div
         class="
           mx-auto
           w-3/4
-          h-1/2
+          h-full
           bg-white
+          opacity-80
+          backdrop-blur-md
           rounded
           shadow-xl
           flex flex-col
           content-around
           items-center
           text-center
-          p-12
+          p-4
         "
       >
-        <h1 class="text-4xl text-gray-900 font-bold mb-4">Kedvezmények</h1>
-        <p class="text-2xl text-gray-700 mb-6">
-          Szadai lakosaink számára állandó 3Ft/L kedvezményt biztosítunk
+        <h1 class="text-4xl text-gray-900 font-bold mb-4 z-20">Kedvezmények</h1>
+        <p class="text-lg md:text-2xl text-gray-700 mb-6 z-20">
+          Szadai lakosaink számára állandó 3Ft/L kedvezményt biztosítunk.
         </p>
-        <p class="text-2xl text-gray-700 mb-6">
+        <p class="text-lg md:text-2xl text-gray-700 mb-6 z-20">
           Kiemelt partnereink számára lehetőség van "tankolókártyával" történő
           fizetésre, amely további kedvezményeket biztosíthat.
         </p>
-        <p class="text-xl text-gray-500">
+        <p class="text-md md:text-xl text-gray-500 z-20">
           A "tankolókártya" igénylésével kapcsolatos részletekért érdeklődjön
-          személyesen a kúton
+          személyesen a kúton.
         </p>
+      </div>
+    </section>
+    <section
+      id="kapcsolat"
+      class="
+        w-full
+        h-auto
+        py-12
+        bg-white
+        grid grid-cols-1 grid-rows-2
+        sm:grid-cols-2 sm:grid-rows-1
+        gap-5
+        p-12
+      "
+    >
+      <div
+        class="
+          w-full
+          h-full
+          flex flex-col
+          content-around
+          items-center
+          text-center
+          rounded
+          shadow-xl
+        "
+      >
+        <h1 class="text-3xl text-gray-900 font-bold mb-4">Kapcsolat</h1>
+        <h2 class="textl-xl text-gray-800 mb-4">
+          2111 Szada, Ipari Park utca 2.
+        </h2>
+        <h2 class="textl-xl text-gray-800 mb-4">Tel: +36 70 8820 320</h2>
+        <h2 class="textl-xl text-gray-800 mb-4">Email: szadakut@gmail.com</h2>
+        <h2 class="textl-xl text-gray-800 mb-4">Nyitvatartás:</h2>
+        <h2 class="textl-xl text-gray-800 mb-4">H-P: 06:00 - 20:00</h2>
+        <h2 class="textl-xl text-gray-800 mb-4">Sz-V: 07:00 - 19:00</h2>
+      </div>
+      <div
+        class="
+          w-full
+          h-full
+          rounded
+          shadow-xl
+          bg-gray-400
+          border-2 border-gray-400
+        "
+      >
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d282.6877197045464!2d19.3010296140824!3d47.61847237090878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741ceed312f2cad%3A0x85dba24a2d893da3!2sSzada%20Benzink%C3%BAt!5e0!3m2!1sen!2shu!4v1626642952003!5m2!1sen!2shu"
+          width="100%"
+          height="100%"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
       </div>
     </section>
   </body>

@@ -1,3 +1,5 @@
+document.cookie = "SameSite=Lax";
+
 function toggleNav(event) {
 	let nav = document.querySelector(".mobile-nav");
 	let burger = document.querySelector(".hamburger");
