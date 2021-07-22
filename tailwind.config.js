@@ -1,6 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
+	mode: "jit",
 	purge: {
 		enabled: true,
 		content: ["./src/*.html"],
@@ -16,7 +17,9 @@ module.exports = {
 			},
 			colors: {
 				zold: {
-					"base": "#62c6b2",
+					base: "#62c6b2",
+					"base-d": "#3D9382",
+					"base-dd": "#368676",
 				},
 				teal: {
 					800: "#00695c",
@@ -38,7 +41,6 @@ module.exports = {
 					800: "#424242",
 					900: "#212121",
 				},
-
 			},
 			spacing: {
 				7: "1.75rem",
@@ -49,6 +51,16 @@ module.exports = {
 			},
 			height: {
 				"1/2": "50%",
+			},
+			spacing: {
+				"navfull-16": "calc(100% - 4rem)",
+				"navfull-20": "calc(100% - 5rem)",
+				"navfel-16": "calc(50% - 2rem)",
+				"navfel-20": "calc(50% - 2.5rem)",
+				"navnegyed-16": "calc(25% - 1rem)",
+				"navnegyed-16": "calc(25% - 1.25rem)",
+				"nav34-16": "calc(75% - 3rem)",
+				"nav34-20": "calc(75% - 3.75rem)",
 			},
 			scale: {
 				30: ".3",
