@@ -30,7 +30,7 @@
 					pr-4
 					sm:pl-1
 					md:pl-0 md:h-20
-					bg-white
+					bg-gray-200
 					grid grid-cols-5 grid-rows-none
 					place-items-center
 					items-center
@@ -307,7 +307,6 @@
 						hidden
 						invisible
 						md:visible md:flex md:mx-5
-						bg-white
 						text-lg
 						lg:text-xl
 						justify-center
@@ -329,7 +328,6 @@
 						hidden
 						invisible
 						md:visible md:flex md:mx-5
-						bg-white
 						text-lg
 						lg:text-xl
 						justify-center
@@ -351,7 +349,6 @@
 						hidden
 						invisible
 						md:visible md:flex md:mx-5
-						bg-white
 						text-lg
 						lg:text-xl
 						justify-center
@@ -416,7 +413,7 @@
 				<div
 					class="
 						mobile-nav
-						bg-white
+						bg-gray-200
 						md:hidden md:invisible
 						absolute
 						top-0
@@ -436,17 +433,17 @@
 					>
 						<a
 							href="#szolgaltatasok"
-							class="bg-white text-2xl h-auto w-full text-gray-800 text-center"
+							class="text-2xl h-auto w-full text-gray-800 text-center"
 							>Szolgáltatások</a
 						>
 						<a
 							href="#kedvezmenyek"
-							class="bg-white text-2xl h-auto w-full text-gray-800 text-center"
+							class="text-2xl h-auto w-full text-gray-800 text-center"
 							>Kedvezmények</a
 						>
 						<a
 							href="#kapcsolat"
-							class="bg-white text-2xl h-auto w-full text-gray-800 text-center"
+							class="text-2xl h-auto w-full text-gray-800 text-center"
 							>Kapcsolat</a
 						>
 					</div>
@@ -455,9 +452,8 @@
 		</header>
 		<section
 			class="
-				bg-zold-base
-				h-navfull-16
-				md:h-navfull-20
+				bg-white
+				h-auto
 				flex flex-col
 				justify-around
 				text-center
@@ -471,7 +467,6 @@
 			<h2
 				class="
 					max-w-lg
-					mb-6
 					font-sans
 					text-3xl
 					md:text-4xl
@@ -481,7 +476,8 @@
 					tracking-tight
 					text-gray-900
 					mx-auto
-					mt-8
+					mt-16
+					mb-12
 					flex-shrink
 				"
 			>
@@ -519,9 +515,12 @@
 							height="24"
 						></rect>
 					</svg>
-					<span class="relative">2012</span>
+					<span class="relative">2012 óta Szada </span>
 				</span>
-				óta Szada szolgálatában.
+				 <div class="relative">
+					egyetlen benzinkútja
+					<div class="absolute w-full h-3 bg-teal-accent-700 -bottom-6"></div>
+				 </div>
 			</h2>
 			<p
 				class="
@@ -530,21 +529,20 @@
 					lg:text-2xl
 					mb-4
 					flex-shrink-0
-					lg:px-20
+					lg:px-48
 				"
 			>
-				A település egyetlen töltőállomása, amely közel egy évtizede szolgálja
-				ki vásárlóit minőségi üzemanyaggal, autóápolási cikkekkel kedvező
-				árakon.
+			A SZADAKÚT a település ipari parkjának bejáratánál üzemel és közel egy évtizede szolgálja ki vásárlóit minőségi üzemanyagokkal, kenőanyaokkal,
+			autóápolási cikkekkel és shop termékekkel kedvező árakon.			
 			</p>
 			<img
 				src="./img/kut.jpg?as=webp&quality=75"
 				class="
 					h-auto
 					w-full
-					sm:max-w-[32rem]
-					md:max-w-[34rem]
-					xl:max-w-[42rem]
+					sm:max-w-[28rem]
+					md:max-w-[30rem]
+					xl:max-w-[32rem]
 					mx-auto
 					rounded
 					shadow-2xl
@@ -554,110 +552,6 @@
 			/>
 		</section>
 		<a class="invisible relative -top-16" id="szolgaltatasok"></a>
-		<section
-			class="
-				px-4
-				py-8
-				mx-auto
-				w-full
-				h-navfull-16
-				md:h-full-20 md:px-8
-				section-scroll
-				grid grid-cols-2
-				sm:grid-cols-3
-				grid-flow-row
-				auto-rows-fr
-				sm:auto-rows-auto sm:grid-rows-2
-				gap-5
-				justify-between
-			"
-		>
-			<div
-				class="
-					w-full
-					h-full
-					mx-auto
-					sm:ml-0
-					text-center
-					bg-white
-					col-span-2
-					sm:row-span-1 sm:col-span-2
-					flex
-					justify-center
-					flex-col
-					shadow-2xl
-					rounded
-					px-2
-				"
-			>
-				<div class="mx-auto px-4 w-auto h-auto my-2">
-					<p
-						class="
-							inline-block
-							text-xs
-							font-semibold
-							tracking-wider
-							text-teal-900
-							rounded-full
-							leading-none
-							bg-zold-base
-							text-center
-							py-1
-							px-2
-							m-1
-						"
-					>
-						MOL minőségű üzemanyagok
-					</p>
-				</div>
-				<h2
-					class="
-						max-w-lg
-						font-sans
-						text-base
-						md:text-xl
-						lg:text-2xl
-						font-bold
-						leading-none
-						tracking-tight
-						text-gray-800
-						mx-auto
-						my-2
-					"
-				>
-					<span class="relative inline-block">
-						<span class="relative">Üzemanyagok,</span>
-					</span>
-					autóápolás
-				</h2>
-				<p
-					class="text-sm md:text-lg lg:text-xl text-gray-800 mx-auto my-2 px-8"
-				>
-					Kiváló minőségű üzemanyagaink és autóápolási cikkeinknek köszönhetően
-					biztos lehet benne, hogy autója a legjobbat kapja.
-				</p>
-			</div>
-			<img
-				class="object-cover w-full h-full max-h-full rounded shadow max-w-full"
-				src="./img/pisztoly2.jpg?as=webp&quality=50"
-				alt=""
-			/>
-			<img
-				class="object-cover w-full h-full max-h-full rounded shadow max-w-full"
-				src="./img/olajok.jpg?as=webp&quality=50"
-				alt=""
-			/>
-			<img
-				class="object-cover w-full h-full max-h-full rounded shadow max-w-full"
-				src="./img/ablakmoso.jpg?as=webp&quality=50"
-				alt=""
-			/>
-			<img
-				class="object-cover w-full h-full max-h-full rounded shadow max-w-full"
-				src="./img/illatos.jpg?as=webp&quality=50"
-				alt=""
-			/>
-		</section>
 		<section
 			class="
 				px-4
@@ -694,23 +588,24 @@
 					px-2
 				"
 			>
-				<div class="mx-auto my-2">
+				<div class="mx-auto px-4 w-auto h-auto mt-4">
 					<p
 						class="
 							inline-block
 							text-xs
-							leading-none
 							font-semibold
 							tracking-wider
 							text-teal-900
 							rounded-full
+							leading-none
 							bg-zold-base
 							text-center
 							py-1
-							px-4
+							px-2
+							m-1
 						"
 					>
-						Ételek, italok
+					Közvetlenül finomítóból származó gázolajat és benzint értékesítünk
 					</p>
 				</div>
 				<h2
@@ -728,11 +623,93 @@
 						my-2
 					"
 				>
-					Shop
+					<span class="relative inline-block">
+						<span class="relative">Üzemanyagok,</span>
+					</span>
+					kenőanyagok, autóápolási termékek
 				</h2>
-				<p class="text-sm md:text-lg lg:text-xl text-white mx-auto my-2 px-8">
-					Széles étel és italválasztékunkkal, illetve finom kávéval várjuk az
-					utazókat a töltőállomás Shop részében.
+				<p
+					class="text-sm md:text-lg lg:text-xl text-white mx-auto my-2 px-8"
+				>
+				Kiváló minőségű üzemanyagainkkal, kedvező árú kenőanyagaikkal és autóápolási cikkekkel várjuk kedves vásárlóinkat.
+				</p>
+			</div>
+			<img
+				class="object-cover w-full h-full max-h-full rounded shadow max-w-full"
+				src="./img/pisztoly2.jpg?as=webp&quality=50"
+				alt=""
+			/>
+			<img
+				class="object-cover w-full h-full max-h-full rounded shadow max-w-full"
+				src="./img/olajok.jpg?as=webp&quality=50"
+				alt=""
+			/>
+			<img
+				class="object-cover w-full h-full max-h-full rounded shadow max-w-full"
+				src="./img/ablakmoso.jpg?as=webp&quality=50"
+				alt=""
+			/>
+			<img
+				class="object-cover w-full h-full max-h-full rounded shadow max-w-full"
+				src="./img/illatos.jpg?as=webp&quality=50"
+				alt=""
+			/>
+		</section>
+		<section
+			class="
+				px-4
+				py-8
+				mx-auto
+				w-full
+				h-navfull-16
+				md:h-full-20 md:px-8
+				section-scroll
+				grid grid-cols-2
+				sm:grid-cols-3
+				grid-flow-row
+				auto-rows-fr
+				sm:auto-rows-auto sm:grid-rows-2
+				gap-5
+				justify-between
+			"
+		>
+			<div
+				class="
+					w-full
+					h-full
+					mx-auto
+					sm:ml-0
+					text-center
+					bg-white
+					col-span-2
+					sm:row-span-1 sm:col-span-2
+					flex
+					justify-center
+					flex-col
+					shadow-2xl
+					rounded
+					px-2
+				"
+			>
+				<h2
+					class="
+						max-w-lg
+						font-sans
+						text-base
+						md:text-xl
+						lg:text-2xl
+						font-bold
+						leading-none
+						tracking-tight
+						text-gray-800
+						mx-auto
+						my-2
+					"
+				>
+				Shop termékek
+				</h2>
+				<p class="text-sm md:text-lg lg:text-xl text-gray-800 mx-auto my-2 px-8">
+					Italok, csokoládék, csipszek és egyéb shop termékek széles választékával várjuk önöket.
 				</p>
 			</div>
 			<img
@@ -778,15 +755,14 @@
 			>
 				<h1 class="text-4xl text-gray-900 font-bold mb-4 z-20">Kedvezmények</h1>
 				<p class="text-lg md:text-2xl text-gray-700 mb-6 z-20">
-					Szadai lakosaink számára állandó 3Ft/L kedvezményt biztosítunk.
+					Szadai lakosok részére állandó 3,-Ft/liter kedvezményt biztosítunk.
 				</p>
 				<p class="text-lg md:text-2xl text-gray-700 mb-6 z-20">
-					Kiemelt partnereink számára lehetőség van "tankolókártyával" történő
-					fizetésre, amely további kedvezményeket biztosíthat.
+					Szerződéses partnereink részére lehetőséget biztostunk átutalással történő fizetésre és egyedi elbirálás alapján kedvezményt adunk.
 				</p>
 				<p class="text-md md:text-xl text-gray-500 z-20">
-					A "tankolókártya" igénylésével kapcsolatos részletekért érdeklődjön
-					személyesen a kúton.
+					Vegye fel a kapcsolatot velünk személyesen a töltőállomásunkon, emaiben
+					vagy telefonon az alábbi elérhetőségeken:
 				</p>
 			</div>
 		</section>
@@ -825,17 +801,20 @@
 					2111 Szada, Ipari Park utca 2.
 				</h2>
 				<h2 class="text-md md:textl-xl text-gray-800 mb-4">
-					Tel: +36 70 8820 320
+					Tel: +36-70-882-0310
 				</h2>
 				<h2 class="text-md md:textl-xl text-gray-800 mb-4">
 					Email: szadakut@gmail.com
 				</h2>
-				<h2 class="text-md md:textl-xl text-gray-800 mb-4">Nyitvatartás:</h2>
+				<h2 class="text-md md:textl-xl text-gray-800 mb-4">Nyitvatartás</h2>
 				<h2 class="text-md md:textl-xl text-gray-800 mb-4">
 					H-P: 06:00 - 20:00
 				</h2>
 				<h2 class="text-md md:textl-xl text-gray-800 mb-4">
 					Sz-V: 07:00 - 19:00
+				</h2>
+				<h2 class="text-md md:textl-xl text-gray-900 mb-4">
+					SZADAKÚT KFT
 				</h2>
 			</div>
 			<div
