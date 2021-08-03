@@ -2,5 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/svtgflqc/public_html/
-    - /bin/rm $DEPLOYPATH/*
-    - /bin/cp -R dist $DEPLOYPATH
+    - /bin/cp dist/* $DEPLOYPATH
